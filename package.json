@@ -1,0 +1,12 @@
+{
+  "name": "untappdsimpleapp",
+  "version": "0.0.1-101",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "less": "1.7.5",
+    "less-middleware":"1.0.4"
+  }
+}

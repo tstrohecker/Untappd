@@ -3,7 +3,7 @@ var app = express();
 var request = require('request');
 var path = require('path');
 var qs = require('querystring');
-
+var lessMiddleware = require('less-middleware');
 var untappdKeys = {
   ClientID:	process.env.CLIENT_ID,
   ClientSecret:	process.env.CLIENT_SECRET
@@ -13,8 +13,8 @@ var untappdKeys = {
 
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
+app.use(lessMiddleware(path.join(__dirname , 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 /*
 *This returns all the views ill need, there is probably a generic way to do this
