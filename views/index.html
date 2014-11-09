@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/underscore.js"></script>
+    <script type="text/javascript" src="/js/angular.js"></script>
+    <script type="text/javascript" src="/js/app/untappdApp.js"></script>
+    <script type="text/javascript" src="/js/factories/untappdFactory.js"></script>
+    <script type="text/javascript" src="/js/controllers/untappdController.js"></script>
+    <script type="text/javascript" src="/js/directives/untappdDirectives.js"></script>
+  </head>
+  <body ng-app="untappdApp" ng-controller="untappdController">
+    <div id="bodyWrapper">
+      <userblock ng-repeat="checkin in data.nearbyusercheckins"></userblock>
+    </div>
+  </body>
+</html>
